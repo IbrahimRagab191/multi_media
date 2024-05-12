@@ -1,0 +1,261 @@
+/* :root{
+    --maincolor:
+} */
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: "Work Sans", sans-serif;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+header{
+    padding: 20px;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header .logo {
+    height: 40px;
+}
+header .links ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    z-index: 1;
+}
+header .links .menu{
+  color: #111;
+  font-size: 22px;
+}
+@media (min-width: 768px) {
+  header .links .menu {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  header .links ul {
+    display: none;
+  }
+}
+header .links .menu:hover + ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: rgb(0 0 0 / 50%);
+}
+header .links .menu:hover + ul li {
+  padding: 10px;
+}
+header .links .menu:hover + ul li a{
+  color: #fff;
+}
+header .links ul li{
+    padding-left: 15px;
+}
+header .links ul li a{
+    text-decoration: none;
+    color: #333;
+    padding: 15px;
+}
+header .links ul li a:hover{
+    color: #a67a4b;
+}
+header .links ul li a i{
+padding-right: 5px;
+}
+/* Start home */
+.home{
+    background-image: url(../Photos/Home.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: calc(100vh - 80px);
+    position: relative;
+}
+.home .content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    max-width: 100%;
+  }
+.home .content h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+}
+.home .content p {
+    font-size: 19px;
+    line-height: 1.8;
+    color: #898585;
+}
+/* End home  */
+/* Start About */
+.About{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.About .container{
+  background-color: #EEE;
+  width: 100%;
+}
+.About .container .title{
+  text-align: center;
+}
+.About .container .title h2 {
+  font-size: 40px;
+  color: #383838;
+  padding-top: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.About .container .title h4{
+  font-size: 14px;
+  color: #494949;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.About .container .about-content p{
+  color: #9a9a9a;
+  font-weight: 500;
+  line-height: 1.6;
+  padding-left: 15px;
+}
+/* End About */
+/* Start Feature */
+.featured  h2, .newCollections h2{
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.featured .container, .newCollections .container{
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+  gap: 30px;
+}
+.product {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 5px 5px 10px 1px rgb(0, 0, 0, 12%);
+  gap: 17.5px;
+}
+.product img {
+  width: 100%;
+}
+
+.product img:hover {
+  cursor: pointer;
+  opacity: 0.95;
+}
+
+.product h2 {
+  font-size: 20px;
+}
+
+.product p {
+  padding: 0 20px;
+  font-size: 12.5px;
+  line-height: 1.35;
+  color: #808080;
+}
+
+.product span {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.product .rate {
+  color: #ffb900;
+  font-size: 12px;
+}
+.product .options {
+  margin-bottom: 25px;
+}
+
+.product .options a {
+  color: white;
+  background-color: #00b5d5;
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 50px;
+}
+
+.bproductox .options a:hover {
+  background-color: #0077b5;
+}
+/* End feature */
+/* Start Footer */
+.footer{
+  padding-top: 60px;
+}
+.footer .container .cont{
+  display: flex;
+  justify-content: space-between;
+}
+.footer .container .cont ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer .container .cont ul li {
+  padding: 10px;
+}
+.footer .container .cont ul li a{
+  text-decoration: none;
+  color: #000000;
+}
+.footer .container .cont ul li a:hover{
+  color: #a67a4b;
+}
+.footer .container .cont .social-icons{
+  align-self: flex-end;
+}
+.footer .container .copyright{
+  text-align: center;
+}
+/* End footer */
